@@ -1,0 +1,25 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-kit-ui 组件库"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-kit-ui",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F5F6F8"
+	},
+	// uni_modules 目录本身已满足 easycom 自动扫描规范；
+	// 这里再显式声明一条 custom 规则作为兜底，单独拷贝组件或 CLI 项目也不会找不到组件
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^kit-(.*)$": "@/uni_modules/kit-$1/components/kit-$1/kit-$1.vue"
+		}
+	},
+	"uniIdRouter": {}
+}

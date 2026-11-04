@@ -1,0 +1,42 @@
+{
+  "id": "kit-icon",
+  "displayName": "kit-icon 图标",
+  "version": "1.0.0",
+  "description": "通用文本符号图标，零字体文件 / 零图片依赖",
+  "keywords": [
+    "icon",
+    "图标",
+    "展示",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-icon$": "@/uni_modules/kit-icon/components/kit-icon/kit-icon.vue"
+    }
+  }
+}

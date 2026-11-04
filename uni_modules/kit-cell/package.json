@@ -1,0 +1,42 @@
+{
+  "id": "kit-cell",
+  "displayName": "kit-cell 单元格",
+  "version": "1.0.0",
+  "description": "列表项单元格，支持图标、标题、描述、右侧值与箭头",
+  "keywords": [
+    "cell",
+    "单元格",
+    "列表",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-cell$": "@/uni_modules/kit-cell/components/kit-cell/kit-cell.vue"
+    }
+  }
+}

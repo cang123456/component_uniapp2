@@ -1,0 +1,42 @@
+{
+  "id": "kit-notice-bar",
+  "displayName": "kit-notice-bar 通知栏",
+  "version": "1.0.0",
+  "description": "纯 CSS 滚动文字通知栏，支持关闭 / 跳转 / 四种语义色",
+  "keywords": [
+    "notice-bar",
+    "通知栏",
+    "反馈",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-notice-bar$": "@/uni_modules/kit-notice-bar/components/kit-notice-bar/kit-notice-bar.vue"
+    }
+  }
+}

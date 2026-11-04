@@ -1,0 +1,42 @@
+{
+  "id": "kit-radio",
+  "displayName": "kit-radio 单选组",
+  "version": "1.0.0",
+  "description": "基于 options 数组的单选组，避免小程序端跨组件通信问题",
+  "keywords": [
+    "radio",
+    "单选",
+    "表单",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-radio$": "@/uni_modules/kit-radio/components/kit-radio/kit-radio.vue"
+    }
+  }
+}

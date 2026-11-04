@@ -1,0 +1,42 @@
+{
+  "id": "kit-tabs",
+  "displayName": "kit-tabs 标签页",
+  "version": "1.0.0",
+  "description": "标签头组件（内容由页面根据 change 自己切换），双兼容 v-model",
+  "keywords": [
+    "tabs",
+    "标签页",
+    "导航",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-tabs$": "@/uni_modules/kit-tabs/components/kit-tabs/kit-tabs.vue"
+    }
+  }
+}

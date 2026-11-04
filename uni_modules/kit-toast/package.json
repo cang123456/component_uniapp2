@@ -1,0 +1,42 @@
+{
+  "id": "kit-toast",
+  "displayName": "kit-toast 轻提示",
+  "version": "1.0.0",
+  "description": "受控显隐的轻提示，自动关闭，支持四种状态与三种位置",
+  "keywords": [
+    "toast",
+    "提示",
+    "反馈",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-toast$": "@/uni_modules/kit-toast/components/kit-toast/kit-toast.vue"
+    }
+  }
+}

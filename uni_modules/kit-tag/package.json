@@ -1,0 +1,23 @@
+{
+  "id": "kit-tag",
+  "displayName": "kit-tag 标签",
+  "version": "1.0.0",
+  "description": "零依赖、多端通用的标签组件，支持 6 种主题 / 镂空 / 圆角 / 可关闭",
+  "keywords": ["uni-app", "tag", "标签", "kit-ui"],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": ["前端组件", "通用组件"],
+    "sale": { "regular": { "price": "0.00" } },
+    "contact": { "qq": "" },
+    "declaration": { "ads": "无", "data": "插件不采集任何数据", "permissions": "无" },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-tag$": "@/uni_modules/kit-tag/components/kit-tag/kit-tag.vue"
+    }
+  }
+}

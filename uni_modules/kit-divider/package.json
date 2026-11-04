@@ -1,0 +1,42 @@
+{
+  "id": "kit-divider",
+  "displayName": "kit-divider 分割线",
+  "version": "1.0.0",
+  "description": "可带文字 / 插槽的分割线，支持虚线",
+  "keywords": [
+    "divider",
+    "分割线",
+    "展示",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-divider$": "@/uni_modules/kit-divider/components/kit-divider/kit-divider.vue"
+    }
+  }
+}

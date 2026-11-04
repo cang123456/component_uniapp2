@@ -1,0 +1,42 @@
+{
+  "id": "kit-load-more",
+  "displayName": "kit-load-more 加载更多",
+  "version": "1.0.0",
+  "description": "列表底部状态提示：加载中 / 更多 / 没有更多 / 失败重试",
+  "keywords": [
+    "load-more",
+    "加载更多",
+    "导航",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-load-more$": "@/uni_modules/kit-load-more/components/kit-load-more/kit-load-more.vue"
+    }
+  }
+}

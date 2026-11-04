@@ -1,0 +1,23 @@
+{
+  "id": "kit-card",
+  "displayName": "kit-card 卡片",
+  "version": "1.0.0",
+  "description": "零依赖、多端通用的卡片容器，支持标题 / 额外信息 / 头部、底部插槽",
+  "keywords": ["uni-app", "card", "卡片", "kit-ui"],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": ["前端组件", "通用组件"],
+    "sale": { "regular": { "price": "0.00" } },
+    "contact": { "qq": "" },
+    "declaration": { "ads": "无", "data": "插件不采集任何数据", "permissions": "无" },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-card$": "@/uni_modules/kit-card/components/kit-card/kit-card.vue"
+    }
+  }
+}

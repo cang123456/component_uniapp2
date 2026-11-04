@@ -1,0 +1,42 @@
+{
+  "id": "kit-steps",
+  "displayName": "kit-steps 步骤条",
+  "version": "1.0.0",
+  "description": "横向 / 竖向步骤条，steps 数组驱动",
+  "keywords": [
+    "steps",
+    "步骤条",
+    "导航",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-steps$": "@/uni_modules/kit-steps/components/kit-steps/kit-steps.vue"
+    }
+  }
+}

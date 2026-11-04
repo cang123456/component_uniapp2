@@ -1,0 +1,42 @@
+{
+  "id": "kit-checkbox",
+  "displayName": "kit-checkbox 多选组",
+  "version": "1.0.0",
+  "description": "基于 options 数组的多选组，值为数组，支持 max 上限",
+  "keywords": [
+    "checkbox",
+    "多选",
+    "表单",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-checkbox$": "@/uni_modules/kit-checkbox/components/kit-checkbox/kit-checkbox.vue"
+    }
+  }
+}

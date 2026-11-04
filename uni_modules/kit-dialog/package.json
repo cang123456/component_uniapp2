@@ -1,0 +1,23 @@
+{
+  "id": "kit-dialog",
+  "displayName": "kit-dialog 对话框",
+  "version": "1.0.0",
+  "description": "零依赖、多端通用的模态对话框，受控显隐，支持自定义内容与底部按钮",
+  "keywords": ["uni-app", "dialog", "弹窗", "kit-ui"],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": ["前端组件", "通用组件"],
+    "sale": { "regular": { "price": "0.00" } },
+    "contact": { "qq": "" },
+    "declaration": { "ads": "无", "data": "插件不采集任何数据", "permissions": "无" },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-dialog$": "@/uni_modules/kit-dialog/components/kit-dialog/kit-dialog.vue"
+    }
+  }
+}

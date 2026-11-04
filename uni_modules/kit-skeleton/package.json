@@ -1,0 +1,42 @@
+{
+  "id": "kit-skeleton",
+  "displayName": "kit-skeleton 骨架屏",
+  "version": "1.0.0",
+  "description": "骨架占位，loading 为 false 时自动显示插槽里的真实内容",
+  "keywords": [
+    "skeleton",
+    "骨架屏",
+    "导航",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-skeleton$": "@/uni_modules/kit-skeleton/components/kit-skeleton/kit-skeleton.vue"
+    }
+  }
+}

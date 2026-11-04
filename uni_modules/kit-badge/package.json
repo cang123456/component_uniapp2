@@ -1,0 +1,42 @@
+{
+  "id": "kit-badge",
+  "displayName": "kit-badge 徽标",
+  "version": "1.0.0",
+  "description": "角标 / 小红点，用默认插槽包裹任意内容",
+  "keywords": [
+    "badge",
+    "徽标",
+    "展示",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-badge$": "@/uni_modules/kit-badge/components/kit-badge/kit-badge.vue"
+    }
+  }
+}

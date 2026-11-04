@@ -1,0 +1,42 @@
+{
+  "id": "kit-rate",
+  "displayName": "kit-rate 评分",
+  "version": "1.0.0",
+  "description": "星标评分，字符绘制无字体依赖，双兼容 v-model",
+  "keywords": [
+    "rate",
+    "评分",
+    "表单",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-rate$": "@/uni_modules/kit-rate/components/kit-rate/kit-rate.vue"
+    }
+  }
+}

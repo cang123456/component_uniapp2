@@ -1,0 +1,26 @@
+{
+  "name": "uni-kit-ui",
+  "version": "1.1.0",
+  "description": "零依赖、多端通用的 uni-app 组件集合，遵循 uni_modules 规范并支持 easycom 自动引入",
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "uni_modules",
+    "index.js",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "meta": "node scripts/gen-meta.js",
+    "verify": "node scripts/verify.js",
+    "zip": "node scripts/pack.js"
+  },
+  "keywords": [
+    "uni-app",
+    "uni_modules",
+    "easycom",
+    "components",
+    "vue"
+  ],
+  "license": "MIT"
+}

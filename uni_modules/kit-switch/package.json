@@ -1,0 +1,42 @@
+{
+  "id": "kit-switch",
+  "displayName": "kit-switch 开关",
+  "version": "1.0.0",
+  "description": "纯 CSS 滑动开关，双兼容 v-model（Boolean）",
+  "keywords": [
+    "switch",
+    "开关",
+    "表单",
+    "uni-app",
+    "kit-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-switch$": "@/uni_modules/kit-switch/components/kit-switch/kit-switch.vue"
+    }
+  }
+}

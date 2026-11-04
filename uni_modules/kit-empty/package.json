@@ -1,0 +1,23 @@
+{
+  "id": "kit-empty",
+  "displayName": "kit-empty 空状态",
+  "version": "1.0.0",
+  "description": "零依赖、多端通用的空状态占位，插图为纯 CSS 绘制，无任何图片资源依赖",
+  "keywords": ["uni-app", "empty", "空状态", "kit-ui"],
+  "license": "MIT",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": ["前端组件", "通用组件"],
+    "sale": { "regular": { "price": "0.00" } },
+    "contact": { "qq": "" },
+    "declaration": { "ads": "无", "data": "插件不采集任何数据", "permissions": "无" },
+    "npmurl": ""
+  },
+  "easycom": {
+    "custom": {
+      "^kit-empty$": "@/uni_modules/kit-empty/components/kit-empty/kit-empty.vue"
+    }
+  }
+}

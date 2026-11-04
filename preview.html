@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>uni-kit-ui 组件外观速览</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #eef1f6; color: #303133; padding: 32px 20px 60px;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; }
+  .top { margin-bottom: 24px; }
+  .top h1 { font-size: 28px; letter-spacing: -0.5px; }
+  .top p { margin-top: 8px; font-size: 14px; color: #6b7280; line-height: 1.7; }
+  .badge { display: inline-block; padding: 3px 10px; margin-right: 6px; border-radius: 99px;
+    background: #e3edff; color: #2979ff; font-size: 12px; }
+  .cols { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .side { flex: 1; min-width: 280px; }
+  .panel { background: #fff; border-radius: 14px; padding: 20px; margin-bottom: 16px;
+    box-shadow: 0 6px 24px rgba(20, 35, 70, .06); }
+  .panel h2 { font-size: 16px; margin-bottom: 12px; }
+  .panel p, .panel li { font-size: 13px; color: #5b6472; line-height: 1.9; }
+  .panel ul { padding-left: 18px; }
+  .cat { margin-top: 10px; }
+  .cat b { display: block; margin-bottom: 6px; font-size: 12px; color: #8a97b8; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { display: inline-block; padding: 3px 8px; border-radius: 6px;
+    background: #f0f4fb; color: #3b4a6b; font-size: 11px; font-family: Menlo, Consolas, monospace; }
+  code { background: #f3f5f9; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #d14; }
+  pre { background: #1f2532; color: #d7e0f4; border-radius: 10px; padding: 14px;
+    font-size: 12px; line-height: 1.7; overflow-x: auto; }
+  pre code { background: none; color: inherit; padding: 0; }
+
+  .phone { position: relative; width: 375px; flex: none; overflow: hidden;
+    border-radius: 22px; background: #f5f6f8; box-shadow: 0 12px 40px rgba(20,35,70,.16); }
+  .nav { height: 44px; background: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 600; border-bottom: 1px solid #f0f1f4; }
+  .scroll { padding: 12px; max-height: 720px; overflow-y: auto; }
+  .hero { background: #2979ff; border-radius: 12px; padding: 20px 16px; margin-bottom: 12px; color: #fff; }
+  .hero b { font-size: 24px; display: block; }
+  .hero span { display: block; margin-top: 5px; font-size: 12px; color: #dbe8ff; }
+  .hero .tags { margin-top: 12px; }
+  .section { background: #fff; border-radius: 12px; padding: 14px 12px; margin-bottom: 12px; }
+  .section h3 { font-size: 15px; margin-bottom: 4px; }
+  .section .id { font-size: 11px; color: #a8abb2; float: right; margin-top: 3px; }
+  .section .label { display: block; margin: 12px 0 8px; font-size: 12px; color: #909399; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .hint { display: block; margin-top: 8px; font-size: 11px; color: #a8abb2; line-height: 1.6; }
+  .gap { height: 12px; }
+  .card-foot { display: flex; align-items: center; justify-content: space-between; }
+  .card-foot span { font-size: 12px; color: #909399; }
+  .toast { position: absolute; left: 50%; bottom: 32px; transform: translateX(-50%) translateY(10px);
+    background: rgba(0,0,0,.78); color: #fff; font-size: 12px; padding: 9px 16px; border-radius: 8px;
+    opacity: 0; transition: .2s; pointer-events: none; white-space: nowrap; z-index: 1200; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ---- 以下样式由各组件 .vue 内的 <style scoped> 按 1rpx = 0.5px 换算而来 ---- */
+  .kit-button { display: inline-flex; vertical-align: middle; flex-direction: row; align-items: center;
+    justify-content: center; box-sizing: border-box; height: 40px; padding: 0 16px; font-size: 14px;
+    line-height: 1; border: 1px solid #dcdfe6; border-radius: 4px; background: #fff; color: #303133;
+    transition: opacity .15s; cursor: pointer; }
+  .kit-button--mini { height: 26px; padding: 0 10px; font-size: 11px; }
+  .kit-button--small { height: 32px; padding: 0 12px; font-size: 12px; }
+  .kit-button--normal { height: 40px; padding: 0 16px; font-size: 14px; }
+  .kit-button--large { height: 48px; padding: 0 20px; font-size: 16px; }
+  .kit-button--default { background: #fff; color: #303133; border-color: #dcdfe6; }
+  .kit-button--primary { background: #2979ff; color: #fff; border-color: #2979ff; }
+  .kit-button--success { background: #18b566; color: #fff; border-color: #18b566; }
+  .kit-button--warning { background: #ff9900; color: #fff; border-color: #ff9900; }
+  .kit-button--danger { background: #fa3534; color: #fff; border-color: #fa3534; }
+  .kit-button--info { background: #909399; color: #fff; border-color: #909399; }
+  .kit-button--default.is-plain { background: transparent; color: #303133; border-color: #dcdfe6; }
+  .kit-button--primary.is-plain { background: transparent; color: #2979ff; border-color: #2979ff; }
+  .kit-button--success.is-plain { background: transparent; color: #18b566; border-color: #18b566; }
+  .kit-button--warning.is-plain { background: transparent; color: #ff9900; border-color: #ff9900; }
+  .kit-button--danger.is-plain { background: transparent; color: #fa3534; border-color: #fa3534; }
+  .kit-button--info.is-plain { background: transparent; color: #909399; border-color: #909399; }
+  .is-round { border-radius: 999px; }
+  .is-block { display: flex; width: 100%; }
+  .is-pressed { opacity: .75; }
+  .is-disabled { opacity: .45; }
+  .kit-button:active { opacity: .75; }
+
+  .kit-tag { display: inline-flex; flex-direction: row; align-items: center; justify-content: center;
+    box-sizing: border-box; padding: 3px 8px; font-size: 12px; line-height: 1.4;
+    border: 1px solid transparent; border-radius: 3px; }
+  .kit-tag--small { padding: 2px 6px; font-size: 10px; }
+  .kit-tag--large { padding: 4px 10px; font-size: 14px; }
+  .kit-tag--default { background: #f4f4f5; color: #606266; border-color: #f4f4f5; }
+  .kit-tag--primary { background: #eaf2ff; color: #2979ff; border-color: #eaf2ff; }
+  .kit-tag--success { background: #e8f8ef; color: #18b566; border-color: #e8f8ef; }
+  .kit-tag--warning { background: #fff4e5; color: #f08c00; border-color: #fff4e5; }
+  .kit-tag--danger { background: #feeceb; color: #fa3534; border-color: #feeceb; }
+  .kit-tag--info { background: #eef0f2; color: #909399; border-color: #eef0f2; }
+  .kit-tag--default.is-plain { background: transparent; color: #909399; border-color: #dcdfe6; }
+  .kit-tag--primary.is-plain { background: transparent; color: #2979ff; border-color: #2979ff; }
+  .kit-tag--success.is-plain { background: transparent; color: #18b566; border-color: #18b566; }
+  .kit-tag--warning.is-plain { background: transparent; color: #f08c00; border-color: #ff9900; }
+  .kit-tag--danger.is-plain { background: transparent; color: #fa3534; border-color: #fa3534; }
+  .kit-tag__close { margin-left: 4px; font-size: 14px; line-height: 1; cursor: pointer; }
+
+  .kit-card { box-sizing: border-box; overflow: hidden; background: #fff; border-radius: 8px; }
+  .is-shadow { box-shadow: 0 2px 10px rgba(0,0,0,.05); }
+  .is-border { border: 1px solid #ebedf0; }
+  .kit-card__head { display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+    box-sizing: border-box; padding: 12px; border-bottom: 1px solid #f2f3f5; }
+  .kit-card__title { display: flex; flex-direction: row; align-items: center; font-size: 15px; font-weight: 600; }
+  .kit-card__bar { width: 3px; height: 14px; margin-right: 6px; border-radius: 3px; background: #2979ff; }
+  .kit-card__extra { font-size: 12px; color: #909399; }
+  .kit-card__body { box-sizing: border-box; font-size: 13px; color: #606266; line-height: 1.7; }
+  .kit-card__foot { box-sizing: border-box; padding: 10px 12px; border-top: 1px solid #f2f3f5; }
+
+  .kit-empty { display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 30px 12px; }
+  .kit-empty__art { position: relative; width: 100px; height: 100px; margin-bottom: 12px; }
+  .kit-empty__halo { position: absolute; top: 0; left: 0; width: 100px; height: 100px;
+    border-radius: 50%; background: #f0f5ff; }
+  .kit-empty__box { position: absolute; top: 44px; left: 29px; width: 42px; height: 31px;
+    box-sizing: border-box; border: 2px solid #b9cdf5; border-radius: 4px; background: #fff; }
+  .kit-empty__lid { position: absolute; top: 37px; left: 25px; width: 50px; height: 7px;
+    border-radius: 4px; background: #8fb1ee; }
+  .kit-empty__dot { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #c9d9f7; }
+  .kit-empty__dot--a { top: 20px; left: 17px; }
+  .kit-empty__dot--b { top: 75px; left: 82px; width: 4px; height: 4px; }
+  .kit-empty__text { font-size: 14px; color: #606266; line-height: 1.5; }
+  .kit-empty__desc { margin-top: 6px; font-size: 12px; color: #a8abb2; line-height: 1.5; text-align: center; }
+  .kit-empty__action { margin-top: 16px; }
+
+  .kit-dialog { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 999;
+    display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  .kit-dialog__mask { position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0,0,0,.5); animation: kit-dialog-fade .18s ease-out; }
+  .kit-dialog__panel { position: relative; z-index: 1; width: 280px; box-sizing: border-box;
+    overflow: hidden; border-radius: 10px; background: #fff; animation: kit-dialog-pop .18s ease-out; }
+  .kit-dialog__title { display: block; box-sizing: border-box; padding: 20px 16px 0;
+    font-size: 16px; font-weight: 600; color: #303133; text-align: center; }
+  .kit-dialog__content { box-sizing: border-box; padding: 18px 20px 24px; font-size: 14px;
+    line-height: 1.6; color: #606266; text-align: center; }
+  .kit-dialog__footer { display: flex; flex-direction: row; border-top: 1px solid #ebedf0; }
+  .kit-dialog__btn { flex: 1; box-sizing: border-box; height: 48px; font-size: 15px;
+    line-height: 48px; text-align: center; cursor: pointer; }
+  .kit-dialog__btn--cancel { color: #606266; border-right: 1px solid #ebedf0; }
+  .kit-dialog__btn--confirm { font-weight: 600; }
+  @keyframes kit-dialog-fade { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes kit-dialog-pop { from { opacity: 0; transform: scale(.88) } to { opacity: 1; transform: scale(1) } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <h1>uni-kit-ui · 组件外观速览</h1>
+    <p>
+      <span class="badge">28 个组件</span><span class="badge">uni_modules</span><span class="badge">easycom</span><span class="badge">零依赖</span><br />
+      库里共 <b>28 个组件</b>，下面手机框还原了其中 5 个基础组件的外观，右侧是完整清单。
+      这是<b>静态外观预览</b>，不是组件本体，也不参与分发：真实组件请复制项目里的 <code>uni_modules/</code> 目录。
+      左侧模拟 375px 手机宽度（样式按 1rpx = 0.5px 换算），可以点一点看交互。
+    </p>
+  </div>
+
+  <div class="cols">
+    <div class="phone">
+      <div class="nav">uni-kit-ui 组件库</div>
+      <div class="scroll">
+        <div class="hero">
+          <b>uni-kit-ui</b>
+          <span>零依赖 · 单文件自包含 · 拷走就能用</span>
+          <div class="tags">
+            <i class="kit-tag kit-tag--primary kit-tag--small">uni_modules</i>
+            <i class="kit-tag kit-tag--success kit-tag--small">easycom</i>
+            <i class="kit-tag kit-tag--warning kit-tag--small">Vue2 / Vue3</i>
+          </div>
+        </div>
+
+        <div class="section">
+          <span class="id">kit-button</span><h3>Button 按钮</h3>
+          <span class="label">主题 type</span>
+          <div class="row">
+            <span class="kit-button kit-button--small kit-button--default" data-toast="button · default">default</span>
+            <span class="kit-button kit-button--small kit-button--primary" data-toast="button · primary">primary</span>
+            <span class="kit-button kit-button--small kit-button--success" data-toast="button · success">success</span>
+            <span class="kit-button kit-button--small kit-button--warning" data-toast="button · warning">warning</span>
+            <span class="kit-button kit-button--small kit-button--danger" data-toast="button · danger">danger</span>
+          </div>
+          <span class="label">尺寸 size</span>
+          <div class="row">
+            <span class="kit-button kit-button--mini kit-button--primary">mini</span>
+            <span class="kit-button kit-button--small kit-button--primary">small</span>
+            <span class="kit-button kit-button--normal kit-button--primary">normal</span>
+            <span class="kit-button kit-button--large kit-button--primary">large</span>
+          </div>
+          <span class="label">状态与形状</span>
+          <div class="row">
+            <span class="kit-button kit-button--small kit-button--primary is-plain">镂空</span>
+            <span class="kit-button kit-button--small kit-button--success is-round">圆角</span>
+            <span class="kit-button kit-button--small is-disabled">禁用</span>
+            <span class="kit-button kit-button--small kit-button--primary is-block" data-toast="block 按钮">块级按钮</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <span class="id">kit-tag</span><h3>Tag 标签</h3>
+          <div class="row">
+            <i class="kit-tag kit-tag--default is-round">默认 <span class="kit-tag__close">×</span></i>
+            <i class="kit-tag kit-tag--primary is-round">推荐 <span class="kit-tag__close">×</span></i>
+            <i class="kit-tag kit-tag--success is-round">已完成 <span class="kit-tag__close">×</span></i>
+            <i class="kit-tag kit-tag--danger is-round">异常 <span class="kit-tag__close">×</span></i>
+          </div>
+          <span class="label">镂空款</span>
+          <div class="row">
+            <i class="kit-tag kit-tag--primary is-plain">primary</i>
+            <i class="kit-tag kit-tag--warning is-plain">warning</i>
+            <i class="kit-tag kit-tag--info is-plain">info</i>
+          </div>
+          <span class="hint">点 × 可以移除标签</span>
+        </div>
+
+        <div class="section">
+          <span class="id">kit-card</span><h3>Card 卡片</h3>
+          <div class="kit-card is-shadow" style="border-radius:8px">
+            <div class="kit-card__head">
+              <div class="kit-card__title"><i class="kit-card__bar"></i>基础卡片</div>
+              <div class="kit-card__extra">2026-11-04</div>
+            </div>
+            <div class="kit-card__body" style="padding:12px">标题、右上角信息、内容区、底部区都可以通过属性或插槽配置。</div>
+            <div class="kit-card__foot">
+              <div class="card-foot">
+                <span>共 3 条记录</span>
+                <span class="kit-button kit-button--mini kit-button--primary">查看</span>
+              </div>
+            </div>
+          </div>
+          <div class="gap"></div>
+          <div class="kit-card is-border" style="border-radius:8px">
+            <div class="kit-card__head"><i class="kit-tag kit-tag--primary kit-tag--small">自定义头部</i></div>
+            <div class="kit-card__body" style="padding:12px;font-size:12px">关闭阴影、开启描边，头部使用 header 插槽。</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <span class="id">kit-empty</span><h3>Empty 空状态</h3>
+          <div class="kit-empty">
+            <div class="kit-empty__art">
+              <div class="kit-empty__halo"></div><div class="kit-empty__box"></div>
+              <div class="kit-empty__lid"></div>
+              <div class="kit-empty__dot kit-empty__dot--a"></div>
+              <div class="kit-empty__dot kit-empty__dot--b"></div>
+            </div>
+            <div class="kit-empty__text">暂无订单</div>
+            <div class="kit-empty__desc">插图由纯 CSS 绘制，不依赖任何图片文件</div>
+            <div class="kit-empty__action"><span class="kit-button kit-button--small kit-button--primary" data-toast="empty 操作按钮">去逛逛</span></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <span class="id">kit-dialog</span><h3>Dialog 对话框</h3>
+          <div class="row"><span class="kit-button kit-button--small kit-button--primary" id="openDialog">打开弹窗</span></div>
+          <span class="hint">受控显隐：由页面的 show 变量决定</span>
+        </div>
+      </div>
+
+      <div class="kit-dialog" id="dialog" style="display:none">
+        <div class="kit-dialog__mask" data-close="1"></div>
+        <div class="kit-dialog__panel">
+          <span class="kit-dialog__title">删除确认</span>
+          <div class="kit-dialog__content">确定要删除这条记录吗？删除后不可恢复。</div>
+          <div class="kit-dialog__footer">
+            <div class="kit-dialog__btn kit-dialog__btn--cancel" data-close="1">取消</div>
+            <div class="kit-dialog__btn kit-dialog__btn--confirm" style="color:#fa3534" data-close="1">删除</div>
+          </div>
+        </div>
+      </div>
+      <div class="toast" id="toast"></div>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <h2>其他项目怎么用</h2>
+        <p>把 <code>uni_modules/</code> 整个目录复制到目标项目<strong>根目录</strong>（与 pages.json 同级），重新编译即可。easycom 会自动扫描，模板里直接写标签：</p>
+        <pre><code>&lt;template&gt;
+  &lt;kit-button type="primary" @click="save"&gt;保存&lt;/kit-button&gt;
+  &lt;kit-tag type="success" text="已同步" /&gt;
+  &lt;kit-card title="说明"&gt;内容&lt;/kit-card&gt;
+&lt;/template&gt;</code></pre>
+        <p style="margin-top:10px">无需 npm install、无需 import、无需 components 注册。也可以只拷某个 <code>.vue</code> 文件单独用。</p>
+      </div>
+      <div class="panel">
+        <h2>28 个组件 · 5 大分类</h2>
+        <div class="cat"><b>基础 4</b><div class="chips">
+          <span class="chip">kit-button</span><span class="chip">kit-tag</span><span class="chip">kit-card</span><span class="chip">kit-empty</span>
+        </div></div>
+        <div class="cat"><b>表单 8</b><div class="chips">
+          <span class="chip">kit-input</span><span class="chip">kit-textarea</span><span class="chip">kit-search</span><span class="chip">kit-switch</span>
+          <span class="chip">kit-stepper</span><span class="chip">kit-rate</span><span class="chip">kit-radio</span><span class="chip">kit-checkbox</span>
+        </div></div>
+        <div class="cat"><b>反馈 7</b><div class="chips">
+          <span class="chip">kit-dialog</span><span class="chip">kit-toast</span><span class="chip">kit-loading</span><span class="chip">kit-popup</span>
+          <span class="chip">kit-action-sheet</span><span class="chip">kit-notice-bar</span><span class="chip">kit-progress</span>
+        </div></div>
+        <div class="cat"><b>展示 4</b><div class="chips">
+          <span class="chip">kit-badge</span><span class="chip">kit-icon</span><span class="chip">kit-avatar</span><span class="chip">kit-divider</span>
+        </div></div>
+        <div class="cat"><b>导航 / 状态 5</b><div class="chips">
+          <span class="chip">kit-cell</span><span class="chip">kit-tabs</span><span class="chip">kit-steps</span>
+          <span class="chip">kit-load-more</span><span class="chip">kit-skeleton</span>
+        </div></div>
+      </div>
+      <div class="panel">
+        <h2>分发物清单</h2>
+        <ul>
+          <li><code>uni_modules/</code> — 组件本体（唯一必须复制的目录）</li>
+          <li><code>README.md</code> — 三种接入方式、API、多端约定</li>
+          <li><code>index.js</code> — npm / 显式 import 的聚合出口</li>
+          <li><code>scripts/gen-meta.js</code> — <code>npm run meta</code> 生成组件元数据 / 文档</li>
+          <li><code>scripts/verify.js</code> — <code>npm run verify</code> 自检</li>
+          <li><code>pages/index/index.vue</code> — 可运行的演示页</li>
+        </ul>
+        <p style="margin-top:8px">每个组件都是单文件自包含：纯 CSS + scoped、无外部 import、无静态资源。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var toast = document.getElementById('toast')
+  var timer = null
+  function showToast(text) {
+    toast.textContent = text
+    toast.classList.add('show')
+    clearTimeout(timer)
+    timer = setTimeout(function () { toast.classList.remove('show') }, 1400)
+  }
+  document.querySelectorAll('[data-toast]').forEach(function (el) {
+    el.addEventListener('click', function () { showToast(el.getAttribute('data-toast')) })
+  })
+  document.querySelectorAll('.kit-tag__close').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation()
+      el.parentNode.remove()
+      showToast('close · 移除了一个标签')
+    })
+  })
+  var dialog = document.getElementById('dialog')
+  document.getElementById('openDialog').addEventListener('click', function () {
+    dialog.style.display = 'flex'
+  })
+  document.querySelectorAll('[data-close]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      dialog.style.display = 'none'
+      showToast('dialog · ' + (el.textContent.trim() || '点击遮罩'))
+    })
+  })
+</script>
+</body>
+</html>
